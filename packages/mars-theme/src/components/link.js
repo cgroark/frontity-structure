@@ -1,7 +1,6 @@
 import { connect, useConnect } from "frontity";
 import React, {useState, useEffect, useRef} from 'react';
 import Link from "@frontity/components/link";
-import { animateScroll as scroll } from "react-scroll";
 
 
 /**
