@@ -18,6 +18,7 @@ import PageError from "./page-error";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  console.log('data index js', data)
 
   return (
     <>
@@ -67,10 +68,8 @@ const globalStyles = css`
 `;
 
 const HeadContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #1f38c5;
+  background-color: #c08497;
+  height: 50vh;
 `;
 
 const Main = styled.div`

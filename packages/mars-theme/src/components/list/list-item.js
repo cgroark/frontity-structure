@@ -11,18 +11,15 @@ import FeaturedMedia from "../featured-media";
  * - FeaturedMedia: the featured image/video of the post
  */
 const Item = ({ state, item }) => {
-  const author = state.source.author[item.author];
-  const date = new Date(item.date);
-
+  const headerID = item.title.rendered.split(' ').join('-').toLowerCase();
+  // const author = state.source.author[item.author];
+  // const date = new Date(item.date);
   return (
     <article>
-      <Link link={item.link}>
-        <Title dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-      </Link>
-
+        <Title id={headerID} dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
       <div>
         {/* If the post has an author, we render a clickable author text. */}
-        {author && (
+        {/* {author && (
           <StyledLink link={author.link}>
             <AuthorName>
               By <b>{author.name}</b>
@@ -32,7 +29,7 @@ const Item = ({ state, item }) => {
         <PublishDate>
           {" "}
           on <b>{date.toDateString()}</b>
-        </PublishDate>
+        </PublishDate> */}
       </div>
 
       {/*
@@ -45,7 +42,7 @@ const Item = ({ state, item }) => {
 
       {/* If the post has an excerpt (short summary text), we render it */}
       {item.excerpt && (
-        <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+        <Excerpt dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
       )}
     </article>
   );

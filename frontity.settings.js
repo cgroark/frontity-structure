@@ -2,9 +2,9 @@ const settings = {
   "name": "frontity-proofofconcept",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "http://localhost:8888/",
+      "title": "Plant Shop",
+      "description": "What a website could look like"
     }
   },
   "packages": [
@@ -13,26 +13,7 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+            
           ],
           "featured": {
             "showOnList": false,
@@ -45,7 +26,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "http://localhost:8888/wp-demo/"
         }
       }
     },

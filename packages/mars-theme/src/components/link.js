@@ -1,5 +1,8 @@
 import { connect, useConnect } from "frontity";
+import React, {useState, useEffect, useRef} from 'react';
 import Link from "@frontity/components/link";
+import { animateScroll as scroll } from "react-scroll";
+
 
 /**
  * The MarsLink component, which is a wrapper on top of the {@link Link}
@@ -16,20 +19,20 @@ import Link from "@frontity/components/link";
  *
  * @returns A {@link Link} component, which returns an HTML anchor element.
  */
-const MarsLink = ({ children, ...props }) => {
-  const { state, actions } = useConnect();
 
+
+
+const MarsLink = ({ children, ...props }) => {
+  console.log('childs', props.link)
+  const { state, actions } = useConnect();
+  // const [height, setHeight] = useState(0);
+  // const elementRef = useRef(null);
   /**
    * A handler that closes the mobile menu when a link is clicked.
    */
-  const onClick = () => {
-    if (state.theme.isMobileMenuOpen) {
-      actions.theme.closeMobileMenu();
-    }
-  };
 
   return (
-    <Link {...props} onClick={onClick}>
+    <Link {...props} >
       {children}
     </Link>
   );

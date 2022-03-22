@@ -6,14 +6,15 @@ import MobileMenu from "./menu";
 const Header = ({ state }) => {
   return (
     <>
+      <Nav />
       <Container>
+        <MobileMenu />
         <StyledLink link="/">
           <Title>{state.frontity.title}</Title>
         </StyledLink>
-        <Description>{state.frontity.description}</Description>
-        <MobileMenu />
+        {/* <Description>{state.frontity.description}</Description> */}
       </Container>
-      <Nav />
+      
     </>
   );
 };
@@ -26,10 +27,10 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   padding: 24px;
-  color: #fff;
+  color: #333;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: space-around;
 `;
 
 const Title = styled.h2`
