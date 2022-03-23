@@ -6,6 +6,8 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+import gutenbergStyle from "../styles/gutenberg/styles.css"
+import gutenbergTheme from "../styles/gutenberg/theme.css";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -32,6 +34,8 @@ const Theme = ({ state }) => {
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
+      <Global styles={css(gutenbergStyle)} />
+      <Global styles={css(gutenbergTheme)} />
 
       {/* Add the header of the site. */}
       <HeadContainer>
